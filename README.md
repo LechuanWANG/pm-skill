@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/readme-hero.svg" alt="AI Product PM Style Skill" width="100%">
+</p>
+
 # AI Product PM Style Skill
 
 一个面向 Codex 的个人产品经理风格 skill，用来让 AI 在做 AI/SaaS 产品 brainstorming、方案设计、功能实现和实现后解释时，更贴近产品经理视角，而不是只从代码视角推进。
