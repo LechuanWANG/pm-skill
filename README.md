@@ -1,6 +1,48 @@
-<p align="center">
-  <img src="./assets/readme-hero.svg" alt="AI Product PM Style Skill" width="100%">
-</p>
+<div align="center">
+  <h3><em>The PM-First AI Product Skill for Codex Agents</em></h3>
+
+  <a href="./ai-product-pm-style/SKILL.md">
+    <img src="./ai-product-pm-style/assets/ai-product-pm-style.svg" alt="AI Product PM Style Skill" width="112">
+  </a>
+
+  <p>
+    <a href="./ai-product-pm-style/SKILL.md">
+      <img alt="Open Skill" src="https://img.shields.io/badge/OPEN-SKILL-111827?style=for-the-badge&labelColor=374151">
+    </a>
+    <a href="#install">
+      <img alt="Install" src="https://img.shields.io/badge/INSTALL-%24skill--installer-A855F7?style=for-the-badge&labelColor=111827">
+    </a>
+  </p>
+
+  <p>
+    <strong>Portable Codex skill for AI/SaaS product work:</strong> PM-first brainstorming, API and Agent architecture,
+    prompt discipline, Harness constraints, modular implementation, clean UI copy, and GitHub prototype research.
+  </p>
+
+  <p>
+    <a href="https://github.com/LechuanWANG/ai-product-pm-style/stargazers">
+      <img alt="GitHub Stars" src="https://img.shields.io/github/stars/LechuanWANG/ai-product-pm-style?style=for-the-badge&logo=github&label=STARS&labelColor=374151&color=6B7280">
+    </a>
+    <a href="./ai-product-pm-style/references/open-source-ideas.md">
+      <img alt="Prototype Notes" src="https://img.shields.io/badge/GITHUB-PROTOTYPE%20NOTES-0F766E?style=for-the-badge&labelColor=111827">
+    </a>
+    <a href="./ai-product-pm-style/agents/openai.yaml">
+      <img alt="Skill Metadata" src="https://img.shields.io/badge/METADATA-openai.yaml-F59E0B?style=for-the-badge&labelColor=111827">
+    </a>
+  </p>
+
+  <p>
+    <a href="#design-principles">
+      <img alt="Tools" src="https://img.shields.io/badge/TOOLS-CODEX%20%C2%B7%20GITHUB-111827?style=for-the-badge&labelColor=1F2937">
+    </a>
+    <a href="./ai-product-pm-style/SKILL.md#ai-%E4%BA%A7%E5%93%81%E6%9E%B6%E6%9E%84%E5%81%8F%E5%A5%BD">
+      <img alt="Focus" src="https://img.shields.io/badge/FOCUS-AGENT%20%C2%B7%20HARNESS-2563EB?style=for-the-badge&labelColor=111827">
+    </a>
+    <a href="#design-principles">
+      <img alt="Style" src="https://img.shields.io/badge/STYLE-PM--FIRST-10B981?style=for-the-badge&labelColor=111827">
+    </a>
+  </p>
+</div>
 
 # AI Product PM Style Skill
 
