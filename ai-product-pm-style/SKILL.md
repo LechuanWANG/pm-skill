@@ -16,7 +16,7 @@ description: PM-first delivery style for AI/SaaS products. Use when Codex is bui
 -   system prompt 和 user prompt 能省则省，必须严格控制上下文。不要盲目堆砌 Prompt。
 -   代码要方便后续产品迭代，保持简洁、易用、可维护。不要堆积难以演进的代码。
 -   不同脚本、模块、prompt、服务、组件和数据文件要按职责放在对应文件夹里；目录结构要清晰，但不要为了形式过度拆分。
--   UI 要简约、好看、切题。按钮和文字描述必须准确、克制，不要随意、空泛或装饰性过强。
+-   UI 要围绕用户任务、产品结构、状态覆盖和后续迭代制作；复杂界面按需读取 UI 制作参考。
 -   Brainstorming、计划说明和实现总结要用产品经理视角表达，除非用户明确要求，否则不要用代码视角主导。
 -   对有复用价值的踩坑、修复模式和产品决策，使用项目内 LLM Wiki 沉淀到当前项目文档；不要把项目知识库写进 skill。
 
@@ -25,6 +25,7 @@ description: PM-first delivery style for AI/SaaS products. Use when Codex is bui
 -   做产品 brainstorming、重大更新规划、MVP 拆解、技术栈/计算机语言选择时，读取 `references/brainstorming.md`。
 -   设计或评审 prompt、context、schema、retrieval、输出契约时，读取 `references/prompt-context.md`。
 -   设计或评审 Agent workflow、tool contract、Harness、权限、校验、fallback 时，读取 `references/agent-harness.md`。
+-   制作、重构或评审产品 UI、页面、组件、交互状态、响应式和前端 polish 时，读取 `references/ui-production.md`。
 -   写代码、组织目录、实现后解释、总结验证和风险时，读取 `references/implementation-summary.md`。
 -   做 GitHub prototype、开源项目或公开实现借鉴时，参考 `references/open-source-ideas.md` 的记录格式。
 -   需要建立、读取或更新项目内 LLM Wiki 反思知识库时，读取 `references/llm-wiki-protocol.md`；真实知识库默认放在当前项目的 `docs/ai-wiki/`，不放在 skill 中。
