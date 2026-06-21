@@ -20,9 +20,6 @@
   </p>
 
   <p>
-    <a href="https://github.com/LechuanWANG/ai-product-pm-style/stargazers">
-      <img alt="GitHub Stars" src="https://img.shields.io/github/stars/LechuanWANG/ai-product-pm-style?style=for-the-badge&logo=github&label=STARS&labelColor=374151&color=6B7280">
-    </a>
     <a href="./ai-product-pm-style/references/open-source-ideas.md">
       <img alt="Prototype Notes" src="https://img.shields.io/badge/GITHUB-PROTOTYPE%20NOTES-0F766E?style=for-the-badge&labelColor=111827">
     </a>
