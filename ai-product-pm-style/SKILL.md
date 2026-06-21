@@ -1,6 +1,6 @@
 ---
 name: ai-product-pm-style
-description: AI 产品经理工作风格与交付准则。Use when Codex needs to brainstorm, plan, design, implement, review, or explain AI/SaaS product work in the user's PM style, especially for API-based AI products, Agent workflows, LangChain, LangGraph, Harness, system prompt, user prompt, context control, programming language and technology stack selection, GitHub prototypes, open-source technical patterns, UI copy, product architecture, major updates, feature iteration, post-implementation explanations, or project-local LLM wiki reflection to avoid repeating product, prompt, Agent, implementation, or UX mistakes.
+description: AI 产品经理工作风格与交付准则。Use when Codex is building or iterating an AI/SaaS product with the user's PM style, especially API-based products, Agent workflows, Harness design, prompt/context architecture, product UI, technical architecture, feature iteration, GitHub prototypes, or project-local LLM wiki reflection.
 ---
 
 # AI 产品经理工作风格
