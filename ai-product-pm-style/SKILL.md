@@ -1,6 +1,6 @@
 ---
 name: ai-product-pm-style
-description: AI 产品经理工作风格与交付准则。Use when Codex is building or iterating an AI/SaaS product with the user's PM style, especially API-based products, Agent workflows, Harness design, prompt/context architecture, product UI, technical architecture, feature iteration, GitHub prototypes, or project-local LLM wiki reflection.
+description: PM-first delivery style for AI/SaaS products. Use when Codex is building or iterating a product with the user's PM style, especially API-based products, Agent workflows, Harness design, prompt/context architecture, product UI, technical architecture, feature iteration, GitHub prototypes, or project-local LLM wiki reflection.
 ---
 
 # AI 产品经理工作风格
