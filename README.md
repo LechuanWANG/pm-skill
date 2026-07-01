@@ -1,8 +1,8 @@
 <div align="center">
-  <h3><em>面向 Codex Agent 的 PM-first AI 产品 Skill</em></h3>
+  <h3><em>把 PM-first AI 产品交付方式装进 Codex Agent</em></h3>
 
   <a href="./pm-skill/SKILL.md">
-    <img src="./pm-skill/assets/pm-skill.svg" alt="PM Skill" width="112">
+    <img src="./pm-skill/assets/pm-skill.svg" alt="PM Skill" width="180">
   </a>
 
   <p>
@@ -15,8 +15,8 @@
   </p>
 
   <p>
-    <strong>一个可迁移的 Codex skill，用于 AI 产品工作：</strong>
-    PM-first brainstorming、AI 职责拆分、Agent Harness、prompt/context 纪律、模块化实现、产品 UI 状态，以及 GitHub prototype 研究。
+    <strong>一个可迁移的 Codex Skill，用于 AI 产品工作：</strong>
+    让 Codex 在 brainstorming、架构选择、Agent Harness、prompt/context、UI 状态、实现验证和交付解释中，按产品经理能判断取舍的方式推进。
   </p>
 
   <p>
@@ -43,15 +43,9 @@
 
 # PM Skill
 
-一个面向 Codex 的个人产品经理风格 skill，用来让 AI 在做 AI 产品 brainstorming、方案设计、功能实现和实现后解释时，更贴近产品经理视角，而不是只从代码视角推进。
+一个面向 Codex 的 PM-first AI 产品 Skill。它不是一组零散 prompt，而是一套可复用的产品交付工作方式：先定义用户流程和 AI 职责，再收敛 Harness 边界、context 策略、prompt 结构、工具调用、UI 状态、验证方式和实现后解释。
 
 English version is available below: [English](#english).
-
-## 介绍视频
-
-<video src="./ai-pm-skill-promo/renders/ai-pm-skill-promo.mp4" controls width="100%"></video>
-
-[打开介绍视频](./ai-pm-skill-promo/renders/ai-pm-skill-promo.mp4)
 
 ## 适用场景
 
@@ -93,7 +87,13 @@ pm-skill/
 
 ## 安装
 
-使用 Codex 的 `$skill-installer`，通过 GitHub 目录 URL 安装：
+最省事的方式：在 Codex 里直接粘贴这句 prompt。
+
+```text
+Use $skill-installer 安装这个 GitHub Skill：https://github.com/LechuanWANG/pm-skill/tree/main/pm-skill
+```
+
+也可以使用 Codex 的 `$skill-installer`，通过 GitHub 目录 URL 安装：
 
 ```text
 $skill-installer install https://github.com/LechuanWANG/pm-skill/tree/main/pm-skill
@@ -106,6 +106,22 @@ $skill-installer install pm-skill from LechuanWANG/pm-skill
 ```
 
 安装完成后，重启 Codex，让它重新发现这个 skill。
+
+## 为什么这个 Skill 不一样
+
+很多类似 Skill 仓库会重点说明 skill folder、安装命令、示例任务或 benchmark 结果。这个 Skill 的重点不是“让模型记住更多规则”，而是把 AI 产品交付拆成可检查的工作流。
+
+| 维度 | 常见 Skill / Prompt 集合 | PM Skill |
+| --- | --- | --- |
+| 任务入口 | 给模型一组写作或编码规则 | 先还原用户流程、产品目标和成功标准 |
+| AI 设计 | 直接写 prompt 或调用 Agent | 先定义 AI 职责，再决定服务、RAG、workflow、Agent 或多 Agent |
+| Agent 控制 | 偏重工具和步骤描述 | 强制考虑 Harness：输入、输出、权限、状态、校验、fallback、持久化 |
+| 上下文 | 容易堆历史、资料和长 prompt | 使用按需检索、压缩、排序、来源和上下文预算 |
+| UI 与交付 | 代码实现后再解释 | 从状态、证据、失败恢复、用户接管和 PM 可读总结倒推实现 |
+| 复用记忆 | 依赖聊天历史 | 用项目内 `docs/llm-wiki/` 沉淀资料、决策、踩坑和用户确认 |
+| 开源借鉴 | 链接项目或复制实现 | 记录 license、观察日期、可借鉴点、产品启发和风险 |
+
+换句话说，它更适合“我要做一个 AI 产品/功能，并且希望 Codex 像产品搭档一样帮我拆解、实现、验证和解释”，而不是只想让模型套用某种固定文风。
 
 ## 使用示例
 
@@ -186,11 +202,7 @@ git ls-files pm-skill
 
 A personal product-manager-style skill for Codex. It helps AI approach AI product brainstorming, solution design, implementation, and post-implementation explanations from a product manager's perspective instead of driving only from code details.
 
-## Intro Video
-
-<video src="./ai-pm-skill-promo/renders/ai-pm-skill-promo.mp4" controls width="100%"></video>
-
-[Open the intro video](./ai-pm-skill-promo/renders/ai-pm-skill-promo.mp4)
+It is not just a prompt pack. It gives Codex a reusable delivery workflow: clarify the user journey and AI responsibility first, then shape Harness boundaries, context strategy, prompt structure, tool use, UI states, validation, and product-readable implementation summaries.
 
 ## Use Cases
 
@@ -232,7 +244,13 @@ pm-skill/
 
 ## Install
 
-Use Codex's `$skill-installer` with the GitHub directory URL:
+Fastest path: paste this prompt directly into Codex.
+
+```text
+Use $skill-installer to install this GitHub Skill: https://github.com/LechuanWANG/pm-skill/tree/main/pm-skill
+```
+
+You can also use Codex's `$skill-installer` with the GitHub directory URL:
 
 ```text
 $skill-installer install https://github.com/LechuanWANG/pm-skill/tree/main/pm-skill
@@ -245,6 +263,22 @@ $skill-installer install pm-skill from LechuanWANG/pm-skill
 ```
 
 After installing, restart Codex so it can pick up the new skill.
+
+## Why This Skill Is Different
+
+Many similar Skill repositories focus on the skill folder format, installation commands, sample tasks, or benchmark results. PM Skill focuses on making AI product delivery inspectable and repeatable.
+
+| Dimension | Common Skill / Prompt Pack | PM Skill |
+| --- | --- | --- |
+| Task entry | Gives the model writing or coding rules | Starts from the user workflow, product goal, and success criteria |
+| AI design | Jumps to prompts or agents | Defines AI responsibility before choosing service logic, RAG, workflow, Agent, or multi-agent patterns |
+| Agent control | Describes tools and steps | Forces Harness thinking: inputs, outputs, permissions, state, validation, fallback, and persistence |
+| Context | Often accumulates history, source material, and long prompts | Uses on-demand retrieval, compression, ranking, source tracking, and context budgets |
+| UI and delivery | Explains code after implementation | Designs from workflow states, evidence, recovery, user takeover, and PM-readable summaries |
+| Reusable memory | Depends on chat history | Stores durable sources, decisions, lessons, and confirmations in project-local `docs/llm-wiki/` |
+| Open-source borrowing | Links or copies implementations | Records license, observation date, reusable ideas, product implications, and risks |
+
+Use it when you want Codex to act like a product partner for an AI feature: framing the problem, choosing the right AI architecture, implementing cleanly, validating behavior, and explaining the result in a way a PM can evaluate.
 
 ## Usage Examples
 
