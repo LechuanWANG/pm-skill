@@ -1,13 +1,13 @@
 ---
 name: pm-skill
-description: PM-first delivery style for AI/SaaS products. Use when Codex is building or iterating with the user's PM style, especially API-backed products, Agent workflows, Harness design, prompt/context architecture, product UI, technical architecture, feature iteration, GitHub prototype research, or project-local LLM Wiki knowledge maintenance.
+description: PM-first delivery style for AI products. Use when Codex is building, iterating, reviewing, or explaining AI-backed products in the user's PM style, especially API-backed products, Agent workflows, Harness design, prompt/context architecture, product UI, technical architecture, feature iteration, GitHub prototype research, or project-local LLM Wiki knowledge maintenance.
 ---
 
 # AI 产品经理工作风格
 
 ## 目标
 
-按 PM-first 的方式思考、规划、实现和解释 AI/SaaS 产品工作。先澄清用户任务和产品结果，再选择 AI 职责、Harness 边界、上下文策略、工程结构和验证方式。
+按 PM-first 的方式思考、规划、实现和解释 AI 产品工作。先澄清用户任务和产品结果，再选择 AI 职责、Harness 边界、上下文策略、工程结构和验证方式。
 
 ## 核心原则
 
@@ -37,10 +37,10 @@ description: PM-first delivery style for AI/SaaS products. Use when Codex is bui
 
 重大更新时先读上下文，再补齐会影响方向、架构、AI 行为或验收的关键信息。小的未定点用明确假设继续推进。
 
-设计 AI SaaS 产品时按这个顺序思考：
+设计 AI 产品时按这个顺序思考：
 
 ```text
-用户流程 -> AI 职责 -> Harness 边界 -> 上下文策略 -> Prompt 策略 -> Agent/tool 策略 -> 产品界面 -> 评估方式
+用户流程 -> AI 职责 -> 是否需要 Agent -> Harness 边界 -> 上下文策略 -> Prompt 策略 -> Agent/tool 策略 -> 产品界面 -> 评估方式
 ```
 
 ## LLM Wiki

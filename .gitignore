@@ -1,5 +1,6 @@
 .DS_Store
 .Rhistory
+.obsidian/
 *.log
 node_modules/
 .env

@@ -15,8 +15,8 @@
   </p>
 
   <p>
-    <strong>一个可迁移的 Codex skill，用于 AI/SaaS 产品工作：</strong>
-    PM-first brainstorming、API 与 Agent 架构、prompt 纪律、Harness 约束、模块化实现、清晰 UI 文案，以及 GitHub prototype 研究。
+    <strong>一个可迁移的 Codex skill，用于 AI 产品工作：</strong>
+    PM-first brainstorming、AI 职责拆分、Agent Harness、prompt/context 纪律、模块化实现、产品 UI 状态，以及 GitHub prototype 研究。
   </p>
 
   <p>
@@ -43,7 +43,7 @@
 
 # PM Skill
 
-一个面向 Codex 的个人产品经理风格 skill，用来让 AI 在做 AI/SaaS 产品 brainstorming、方案设计、功能实现和实现后解释时，更贴近产品经理视角，而不是只从代码视角推进。
+一个面向 Codex 的个人产品经理风格 skill，用来让 AI 在做 AI 产品 brainstorming、方案设计、功能实现和实现后解释时，更贴近产品经理视角，而不是只从代码视角推进。
 
 English version is available below: [English](#english).
 
@@ -57,11 +57,15 @@ English version is available below: [English](#english).
 
 这个 skill 特别适合以下场景：
 
-- 设计 AI SaaS 产品、API-backed AI 功能或 Agent 工作流
+- 设计 AI 产品、API-backed AI 功能或 Agent 工作流
 - 根据软件特性和执行计划，为 app、网站、工具或 SaaS 选择合适的计算机语言和技术栈
+- 先定义 AI 职责，再判断是否需要 Agent、RAG、workflow 或普通服务
 - 规划 LangChain、LangGraph 或类似 Agent orchestration 架构
 - 控制 system prompt、user prompt 和上下文预算
-- 用 Harness 思想约束 AI 输入、输出、工具边界和校验点
+- 用 Harness 思想约束 AI 输入、输出、工具边界、状态转换和校验点
+- 把复杂 AI 行为拆成 analyze、decide、retrieve、generate、validate、persist 等可控节点
+- 设计按需检索和 compact context，避免把完整历史、报告、transcript 或记忆全部塞进 prompt
+- 规划 AI 产品 UI 的工作流状态、进度反馈、证据展示和用户接管路径
 - 做重大产品更新前的需求澄清、方案拆解和阶段计划
 - 从 GitHub prototype 或开源项目里提炼可借鉴的技术特点
 - 用项目内 LLM Wiki 维护可复用资料、分析、决策和踩坑经验，避免项目记忆流失
@@ -125,13 +129,17 @@ Use $pm-skill 按我的产品风格解释你刚刚实现的代码改动。
 
 - 产品逻辑先于代码细节。
 - Brainstorming 阶段要根据目标平台、交互复杂度、AI/API 集成、数据处理、部署和维护成本选择合适的计算机语言与技术栈。
+- 先定义 AI 在用户流程中的职责，再决定是否需要 Agent、多 Agent、RAG、workflow 或普通服务。
+- Agent 必须有 Harness：状态、输入、输出、工具边界、权限、阶段转换、校验、fallback 和持久化点。
+- 复杂 AI 行为拆成 analyze、decide、retrieve、generate、validate、persist 等节点，能用确定性代码完成的部分不要放进模型。
 - Prompt 和上下文要克制，不盲目堆砌。
+- 历史、资料和记忆按需检索，进入模型前要压缩、限量、排序并保留来源。
 - Harness 要明确输入、输出、工具边界、校验点和失败处理。
 - 鼓励技术性创新，但要先用 prototype 或小范围实现验证。
 - 主动从 GitHub prototype 和开源项目中提炼技术特点、架构模式和工程组织方式。
 - 有长期价值的资料、分析、决策、用户确认和踩坑经验沉淀到具体项目的 `docs/llm-wiki/`，skill 只保留维护协议。
 - 代码结构要清晰、模块化、便于后续产品迭代。
-- UI 要简约、好看、切题，文案要短、准、具体。
+- UI 要简约、好看、切题，文案要短、准、具体；AI 产品界面要覆盖状态、进度、证据、失败恢复和用户接管。
 
 ## 开源项目研究记录
 
@@ -152,6 +160,7 @@ Use $pm-skill 按我的产品风格解释你刚刚实现的代码改动。
 - `references/agent-harness.md`：用于 Agent workflow、tool contract、Harness 边界、校验和 fallback
 - `references/ui-production.md`：用于产品 UI、页面、组件、交互状态、响应式和前端 polish
 - `references/implementation-summary.md`：用于实现结构、UI 文案、验证和实现后解释
+- `references/open-source-ideas.md`：用于 GitHub prototype、开源项目和公开实现借鉴
 - `references/llm-wiki-protocol.md`：用于项目内 LLM Wiki 维护协议
 
 ## 仓库格式
@@ -175,7 +184,7 @@ git ls-files pm-skill
 
 # PM Skill
 
-A personal product-manager-style skill for Codex. It helps AI approach AI/SaaS product brainstorming, solution design, implementation, and post-implementation explanations from a product manager's perspective instead of driving only from code details.
+A personal product-manager-style skill for Codex. It helps AI approach AI product brainstorming, solution design, implementation, and post-implementation explanations from a product manager's perspective instead of driving only from code details.
 
 ## Intro Video
 
@@ -187,11 +196,15 @@ A personal product-manager-style skill for Codex. It helps AI approach AI/SaaS p
 
 This skill is especially useful for:
 
-- Designing AI SaaS products, API-backed AI features, or Agent workflows
+- Designing AI products, API-backed AI features, or Agent workflows
 - Choosing the right programming language and technology stack for apps, websites, tools, or SaaS products based on product traits and execution plans
+- Defining the AI responsibility before choosing Agent, RAG, workflow, or regular services
 - Planning LangChain, LangGraph, or similar Agent orchestration architectures
 - Managing system prompts, user prompts, and context budgets
-- Applying Harness-style constraints to AI inputs, outputs, tool boundaries, and validation checkpoints
+- Applying Harness-style constraints to AI inputs, outputs, tool boundaries, state transitions, and validation checkpoints
+- Breaking complex AI behavior into analyze, decide, retrieve, generate, validate, and persist nodes
+- Designing on-demand retrieval and compact context instead of stuffing full history, reports, transcripts, or memory into prompts
+- Planning AI product UI workflow states, progress feedback, evidence display, and user takeover paths
 - Clarifying requirements, breaking down plans, and staging major product updates
 - Extracting reusable technical patterns from GitHub prototypes or open-source projects
 - Maintaining reusable sources, analyses, decisions, user confirmations, and lessons in a project-local LLM Wiki so project memory compounds instead of disappearing into chat history
@@ -255,13 +268,17 @@ Use $pm-skill 按我的产品风格解释你刚刚实现的代码改动。
 
 - Product logic comes before code details.
 - During brainstorming, choose the programming language and technology stack based on target platform, interaction complexity, AI/API integration, data processing, deployment, and maintenance cost.
+- Define the AI responsibility in the user workflow before choosing Agent, multi-agent, RAG, workflow, or regular services.
+- Agents need a Harness: state, inputs, outputs, tool boundaries, permissions, transitions, validation, fallback, and persistence points.
+- Split complex AI behavior into analyze, decide, retrieve, generate, validate, and persist nodes; keep deterministic logic out of the model when code can do it.
 - Prompts and context should stay disciplined instead of accumulating unnecessary instructions.
+- Retrieve history, sources, and memory on demand, then compress, limit, rank, and source them before they enter the model.
 - Harness boundaries should define inputs, outputs, tool boundaries, validation checkpoints, and failure handling.
 - Technical innovation is encouraged, but validate it first with a prototype or narrow implementation.
 - Actively extract technical ideas, architecture patterns, and engineering organization from GitHub prototypes and open-source projects.
 - Long-term valuable sources, analyses, decisions, user confirmations, and lessons should be stored in the current project's `docs/llm-wiki/`; the skill only keeps the maintenance protocol.
 - Code structure should stay clear, modular, and easy to iterate on.
-- UI should be simple, polished, and context-aware. Copy should be short, precise, and concrete.
+- UI should be simple, polished, and context-aware. Copy should be short, precise, and concrete; AI product interfaces should cover state, progress, evidence, failure recovery, and user takeover.
 
 ## Open Source Research Notes
 
@@ -282,6 +299,7 @@ The main `SKILL.md` stays concise and routes task-specific details into focused 
 - `references/agent-harness.md` for Agent workflow, tool contracts, Harness boundaries, validation, and fallback
 - `references/ui-production.md` for product UI, pages, components, interaction states, responsiveness, and frontend polish
 - `references/implementation-summary.md` for implementation structure, UI copy, validation, and post-implementation explanation
+- `references/open-source-ideas.md` for GitHub prototypes, open-source projects, and public implementation research
 - `references/llm-wiki-protocol.md` for project-local LLM Wiki maintenance protocol
 
 ## Repository Format
