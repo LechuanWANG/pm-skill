@@ -2,7 +2,7 @@
   <h3><em>把 PM-first AI 产品交付方式装进 Codex Agent</em></h3>
 
   <a href="./pm-skill/SKILL.md">
-    <img src="./pm-skill/assets/pm-skill.svg" alt="PM Skill" width="180">
+    <img src="./pm-skill/assets/pm-skill.svg" alt="PM Skill" width="360">
   </a>
 
   <p>
