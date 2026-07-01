@@ -49,7 +49,7 @@ description: PM-first delivery style for AI products. Use when Codex is building
 
 当用户提供新资料、query 形成可复用综合、用户确认关键判断、出现可复用修复模式，或新信息挑战旧结论时，按 `references/llm-wiki-protocol.md` 维护 wiki。
 
-Ingest 以长期价值为边界，主题保持开放；写入前执行 provenance、隐私、授权和置信度检查。
+Ingest 以长期价值为边界，主题保持开放；raw source 可以是单个文件、整个 skill、整个项目快照、仓库历史片段或当前对话中有长期价值的部分。`raw/sources.md` 是 source registry，不是唯一存放位置；长材料或对话摘要可放到 `raw/` 下新文件。写入前执行 scope、provenance、隐私、授权和置信度检查，不把低价值聊天噪声长期化。
 
 ## 输出风格
 

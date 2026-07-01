@@ -14,6 +14,30 @@
 
 Ingest 以长期价值为边界，主题保持开放。Source acquisition 以用户意图、权限、隐私、版权和项目范围为边界。
 
+## Raw Source 粒度
+
+Raw source 不限于单个文件。只要 scope 清楚、来源可追溯、用户意图允许，以下都可以登记为 raw source：
+
+-   单个文件、目录、附件、截图、PDF、网页或数据集。
+-   整个 skill 目录、整个项目快照、仓库历史片段、release diff 或代码库检查结果。
+-   当前对话中有长期价值的用户确认、需求、约束、决策、纠错和验收标准。
+-   一组外部资料、GitHub prototype 搜索结果或竞品观察，只要记录查询方式、观察日期、筛选标准和适用范围。
+
+`raw/sources.md` 是 source registry，不是唯一 raw 容器。短 source 可以只在 `sources.md` 登记；较长材料、对话摘要、项目快照、外部研究结果、截图说明或批量来源可以放到 `raw/` 下新文件，再在 `sources.md` 登记路径和摘要。按需创建目录，例如：
+
+```text
+raw/
+├── sources.md
+├── conversations/
+│   └── YYYY-MM-DD-<topic>.md
+├── external/
+│   └── <source-or-topic>.md
+└── project-snapshots/
+    └── YYYY-MM-DD-<scope>.md
+```
+
+登记大粒度 source 时不要把全部内容复制进综合页面。记录 source id、范围、时间、来源、访问方式、置信度和摘要；raw 文件保存必要摘录、结构化摘要、筛选标准或观察记录；pages 只提炼会改变未来行动的结论。对话作为 source 时优先提炼用户确认和决策，不保存寒暄、临时推理、调试噪声、敏感信息或未授权内容。
+
 ## 目录
 
 最小结构：
@@ -93,6 +117,7 @@ Read this index first, then only task-relevant pages.
 Source acquisition 检查：
 
 -   用户提供、上传、粘贴或指向的资料可按任务读取。
+-   用户当前对话、整个项目、整个 skill 或仓库 diff 可以作为 raw source 单元登记，但要写清 scope、时间边界和哪些部分被用于综合。
 -   公开资料研究要记录来源、访问日期和置信度。
 -   登录态、付费内容、客户资料、个人敏感信息、公司内部资料和受版权/保密约束的 source，先确认保存方式。
 -   Raw source 可读取；长期登记、摘要和写回还要通过价值判断。
@@ -100,7 +125,7 @@ Source acquisition 检查：
 Ingest 流程：
 
 1.  识别 source：标题、来源、日期、作者/提供者、可信度、适用范围。
-2.  登记 raw：保存 source，或在 `raw/sources.md` 记录路径、URL、摘要和访问方式。
+2.  登记 raw：短 source 可直接在 `raw/sources.md` 记录路径、URL、摘要和访问方式；较长 source 可新建 `raw/` 子文件保存摘要、摘录、筛选标准或观察记录，再在 `sources.md` 登记。
 3.  读 `index.md`，定位受影响页面。
 4.  更新相关 pages，覆盖新增、修正、冲突、待确认问题和被替代结论。
 5.  更新 `index.md`。
